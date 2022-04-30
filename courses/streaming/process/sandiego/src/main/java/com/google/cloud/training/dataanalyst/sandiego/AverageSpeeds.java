@@ -140,7 +140,7 @@ public class AverageSpeeds {
     })) //
         .apply(BigQueryIO.writeTableRows().to(avgSpeedTable)//
             .withSchema(schema)//
-            .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND)
+            .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_disposition)
             .withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_IF_NEEDED));
 
     p.run();
